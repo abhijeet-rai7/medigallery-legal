@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account & Data Deletion - MediGallery</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1E293B; max-width: 800px; margin: 0 auto; padding: 24px; }
+    h1 { color: #0F172A; font-size: 28px; border-bottom: 2px solid #E2E8F0; padding-bottom: 12px; }
+    h2 { color: #0F172A; font-size: 20px; margin-top: 24px; }
+    p, li { color: #334155; font-size: 15px; }
+    .card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-top: 20px; }
+    .btn { display: inline-block; background: #EF4444; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 500; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>MediGallery Account & Data Deletion</h1>
+  <p>In accordance with Google Play data protection policies, MediGallery provides full data ownership and deletion mechanisms for all registered healthcare users.</p>
+
+  <h2>How to Delete Your Account and Data</h2>
+  <div class="card">
+    <h3>Option 1: In-App Instant Deletion (Recommended)</h3>
+    <ol>
+      <li>Open the MediGallery app on your mobile device.</li>
+      <li>Go to <strong>Settings > Account</strong>.</li>
+      <li>Scroll to the bottom and tap <strong>Delete account</strong>.</li>
+      <li>Confirm deletion. Your user profile, access tokens, and owned clinic media will be permanently deleted immediately.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>Option 2: Web Deletion Request Form</h3>
+    <p>If you no longer have access to the MediGallery app, you can submit an email deletion request to our privacy team:</p>
+    <p>Send an email from your registered Google account email address to: <strong><a href="mailto:support@medigallery.app?subject=Account%20Deletion%20Request">support@medigallery.app</a></strong> with the subject line <em>"Account Deletion Request"</em>.</p>
+    <p>Your request will be processed, and all associated cloud data and authentication records will be permanently removed within 7 business days.</p>
+  </div>
+
+  <h2>Data Retention Policy</h2>
+  <p>When an account is deleted:</p>
+  <ul>
+    <li>All personal identification records and Google Auth tokens are permanently removed from Google Firebase.</li>
+    <li>All encrypted photos, videos, and thumbnails in Cloudflare R2 belonging to owned clinics are purged.</li>
+    <li>We do not retain backup archives of deleted clinical records.</li>
+  </ul>
+</body>
+</html>
