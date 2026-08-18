@@ -3,52 +3,352 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - MediGallery</title>
+  <title>MediGallery — Clinical Photo & Video EHR for Doctors</title>
+  <meta name="description" content="Every patient photo, exactly where it belongs. MediGallery is the dedicated clinical photo and video management app for dentists, dermatologists, and medical practitioners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1E293B; max-width: 800px; margin: 0 auto; padding: 24px; }
-    h1 { color: #0F172A; font-size: 28px; border-bottom: 2px solid #E2E8F0; padding-bottom: 12px; }
-    h2 { color: #0F172A; font-size: 20px; margin-top: 28px; }
-    p, li { color: #334155; font-size: 15px; }
-    .updated { color: #64748B; font-size: 14px; margin-bottom: 24px; }
-    .box { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; margin: 20px 0; }
+    :root {
+      --primary: #0E8A7D;
+      --primary-dark: #095C54;
+      --primary-light: #E6F5F3;
+      --bg: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .cta-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    
+    .features {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+    .features-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    
+    .security {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .security-box {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 16px;
+      padding: 40px 24px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .security-box h3 {
+      color: #166534;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .security-box p {
+      color: #15803D;
+      font-size: 15px;
+    }
+
+    footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 50px 24px 30px;
+      border-top: 1px solid #1E293B;
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #FFFFFF; }
+    .copyright {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid #1E293B;
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+      .hero { padding: 48px 20px 40px; }
+    }
   </style>
 </head>
 <body>
-  <h1>MediGallery Privacy Policy</h1>
-  <p class="updated">Last updated: August 15, 2026</p>
 
-  <p>MediGallery ("we", "our", or "the App") is a clinical photography and patient case management application built exclusively for medical, dental, and healthcare practitioners. We prioritize data protection, patient privacy, and HIPAA-aligned security standards.</p>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-icon">M</div>
+        <span>MediGallery</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="privacy_policy.html">Privacy</a>
+        <a href="terms_of_service.html">Terms</a>
+        <a href="mailto:actionapp.actionstar@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>1. Information We Collect</h2>
-  <ul>
-    <li><strong>Account Information:</strong> Name, email address, and Google account profile identifier provided during authentication.</li>
-    <li><strong>Clinical Media & Patient Records:</strong> Clinical photographs, comparison photos, short procedural video clips, captions, and patient identifiers entered by authorized clinic staff.</li>
-    <li><strong>Subscription & Purchase Data:</strong> In-app purchase transaction tokens processed securely through Google Play Billing. We never store or process credit card details directly.</li>
-    <li><strong>App Performance & Crash Analytics:</strong> Anonymous diagnostic logs and crash reports collected via Firebase Crashlytics to maintain application stability.</li>
-  </ul>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="badge">🏥 Purpose-Built for Dentistry & Dermatology</div>
+    <h1>Every Patient Photo, Exactly Where It Belongs.</h1>
+    <p>The dedicated clinical photo and video EHR. Continuous intraoral torch camera, interactive before & after sliders, and 1-tap patient case archiving.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.medigallery.app" class="cta-btn">
+      <span>Get it on Google Play</span>
+    </a>
+  </section>
 
-  <h2>2. How We Use Your Data</h2>
-  <ul>
-    <li>To organize, store, and display clinical media for your healthcare practice.</li>
-    <li>To enable multi-device synchronization and automatic cloud backups across your authorized clinic members.</li>
-    <li>To process subscription plans and feature access via Google Play.</li>
-  </ul>
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="features-container">
+      <h2 class="section-title">Designed for Fast-Paced Clinical Workflows</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Continuous Intraoral Torch</h3>
+          <p>Built-in persistent flashlight mode illuminates deep maxillary molars and skin lesions without triggering jarring flashes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Before & After Compare</h3>
+          <p>Interactive side-by-side split screen and vertical cross-fade sliders make chairside case presentation compelling for patients.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📁</div>
+          <h3>Patient-Centric Folders</h3>
+          <p>Keep orthodontic progressions, veneer makeovers, and dermal healing timelines organized in secure patient charts.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📸</div>
+          <h3>Rapid Multi-Shot Burst</h3>
+          <p>Snap all 5 standard intraoral angles consecutively in seconds without leaving the operatory viewfinder.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎥</div>
+          <h3>Real First-Frame Previews</h3>
+          <p>Record HD clinical procedure clips with immediate first-frame video thumbnails for effortless browsing.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💾</div>
+          <h3>Total Data Freedom</h3>
+          <p>Download all your clinic's patient folders and original high-res media directly to phone storage with zero lock-in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>3. Data Protection and Encryption</h2>
-  <p>All clinical media, patient identifiers, and database records are encrypted in transit using Transport Layer Security (TLS 1.3) and encrypted at rest using AES-256 standards on Cloudflare R2 and Google Cloud Firestore.</p>
+  <!-- Security Section -->
+  <section class="security">
+    <div class="security-box">
+      <h3>🔒 Private, Encrypted & Zero Data Monetization</h3>
+      <p>All clinical records and high-definition media are protected by AES-256 at rest and TLS 1.3 in transit. We never sell or monetize healthcare data.</p>
+    </div>
+  </section>
 
-  <h2>4. Data Sharing & Third Parties</h2>
-  <p>We do not sell, rent, or monetize personal or clinical data. We only utilize trusted infrastructure providers to deliver app services:</p>
-  <ul>
-    <li><strong>Google Firebase:</strong> User authentication, database metadata, and crash diagnostics.</li>
-    <li><strong>Cloudflare R2:</strong> Encrypted object storage for high-resolution clinical media.</li>
-    <li><strong>Google Play Billing:</strong> Subscription transaction processing.</li>
-  </ul>
+  <!-- Footer with Legal Links -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo-brand" style="color: #FFFFFF; margin-bottom: 12px;">
+          <div class="logo-icon">M</div>
+          <span>MediGallery</span>
+        </div>
+        <p style="font-size: 14px; max-width: 280px;">Clinical photography & case management EHR for doctors, dentists, and dermatologists.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Legal & Policy</h4>
+        <ul>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+          <li><a href="terms_of_service.html">Terms of Service</a></li>
+          <li><a href="delete_account.html">Account & Data Deletion</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support & Contact</h4>
+        <ul>
+          <li><a href="mailto:actionapp.actionstar@gmail.com">actionapp.actionstar@gmail.com</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.medigallery.app">Google Play Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 MediGallery. All rights reserved.
+    </div>
+  </footer>
 
-  <h2>5. Account & Data Deletion</h2>
-  <p>You have the right to request permanent deletion of your account and all associated patient media at any time. You may delete your account directly inside the app under <em>Settings > Account > Delete Account</em>, or via our web deletion portal at <a href="delete_account.html">Account Deletion Request</a>.</p>
-
-  <h2>6. Contact Us</h2>
-  <p>If you have any questions regarding this Privacy Policy or your data, please contact our support team at: <a href="mailto:support@medigallery.app">support@medigallery.app</a>.</p>
 </body>
 </html>
