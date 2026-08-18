@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediGallery — Clinical Media, Patient Records & Multi-Clinic Management</title>
-  <meta name="description" content="The dedicated clinical media management EHR for healthcare practitioners. Seamlessly organize patient photos, clinical notes, treatment progressions, and multi-branch clinics.">
+  <title>MediGallery — Clinical Media & Patient Management</title>
+  <meta name="description" content="MediGallery is a clinical media management and EHR application for dental, medical, and dermatology practitioners. Manage patient photos, treatment notes, and multi-branch clinics securely.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -125,6 +125,37 @@
     }
     .cta-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
     
+    /* Purpose Section */
+    .purpose {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    .purpose-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 32px;
+    }
+    .purpose-card h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .purpose-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+    .purpose-card ul {
+      margin-left: 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .purpose-card li { margin-bottom: 8px; }
+
     .features {
       background: var(--bg-subtle);
       border-top: 1px solid var(--border);
@@ -185,30 +216,35 @@
       line-height: 1.5;
     }
     
-    .security {
+    /* Google OAuth & Security Section */
+    .oauth-info {
       max-width: 1100px;
       margin: 0 auto;
       padding: 80px 24px;
-      text-align: center;
     }
-    .security-box {
+    .oauth-box {
       background: #F0FDF4;
       border: 1px solid #BBF7D0;
       border-radius: 16px;
-      padding: 40px 24px;
-      max-width: 800px;
-      margin: 0 auto;
+      padding: 40px 32px;
     }
-    .security-box h3 {
+    .oauth-box h3 {
       color: #166534;
       font-size: 22px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
-    .security-box p {
+    .oauth-box p {
       color: #15803D;
       font-size: 15px;
+      margin-bottom: 12px;
     }
+    .oauth-box ul {
+      margin-left: 20px;
+      color: #15803D;
+      font-size: 14px;
+    }
+    .oauth-box li { margin-bottom: 6px; }
 
     footer {
       background: #0F172A;
@@ -264,81 +300,102 @@
         <span>MediGallery</span>
       </a>
       <nav class="nav-links">
+        <a href="#about">About & Purpose</a>
         <a href="#features">Features</a>
+        <a href="#oauth-policy">Google Sign-In Policy</a>
         <a href="privacy_policy.html">Privacy</a>
         <a href="terms_of_service.html">Terms</a>
-        <a href="mailto:actionapp.actionstar@gmail.com">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="badge">🏥 Purpose-Built Clinical Media & EHR Platform</div>
-    <h1>Effortless Patient Media, Clinical Notes & Multi-Clinic Management.</h1>
-    <p>The dedicated clinical photography and case management system for dentists, dermatologists, and healthcare practices. Keep every patient record, treatment timeline, and clinical note organized across all your clinic locations.</p>
+    <div class="badge">🏥 Purpose-Built Clinical EHR & Media Platform</div>
+    <h1>MediGallery — Clinical Media, Patient Records & Multi-Clinic Management</h1>
+    <p>MediGallery is a clinical photography and case management system engineered for dentists, dermatologists, and healthcare practitioners. Securely organize patient charts, treatment timelines, procedural notes, and multi-branch clinic workflows.</p>
     <a href="https://play.google.com/store/apps/details?id=com.medigallery.app" class="cta-btn">
       <span>Get MediGallery on Google Play</span>
     </a>
   </section>
 
+  <!-- Purpose of Application Section -->
+  <section class="purpose" id="about">
+    <div class="purpose-card">
+      <h2>Application Purpose & Overview</h2>
+      <p><strong>MediGallery</strong> is built specifically to address the unique documentation and workflow requirements of healthcare practices. Rather than mixing clinical photographs into personal device galleries, MediGallery provides a dedicated, encrypted environment where practitioners can:</p>
+      <ul>
+        <li><strong>Maintain Patient-Specific Records:</strong> Securely categorize high-resolution diagnostic images, intraoral photos, and short surgical videos into individual patient charts.</li>
+        <li><strong>Document Treatment Progress:</strong> Attach timestamped clinical notes, diagnosis notes, and observations directly to patient files for seamless continuity of care.</li>
+        <li><strong>Manage Multiple Practice Branches:</strong> Allow doctors practicing across different dental clinics or hospital departments to switch clinic environments with completely isolated data.</li>
+        <li><strong>Conduct Case Presentations:</strong> Utilize interactive before-and-after comparison tools chairside to clearly explain treatment plans to patients.</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- Features Grid -->
   <section class="features" id="features">
     <div class="features-container">
-      <h2 class="section-title">Designed for Modern Practice Workflows</h2>
-      <p class="section-subtitle">Streamline patient documentation, case presentations, and operatory collaboration.</p>
+      <h2 class="section-title">Key Capabilities of MediGallery</h2>
+      <p class="section-subtitle">A comprehensive platform tailored for modern clinical excellence.</p>
       
       <div class="grid">
         <!-- 1. Patient Directory & Media Organization -->
         <div class="card">
           <div class="card-icon">📁</div>
           <h3>Patient-Centric Media Folders</h3>
-          <p>Organize high-resolution photos and procedural videos into clean, dedicated patient charts. Never lose clinical documentation in your personal camera roll again.</p>
+          <p>Organize high-resolution photos and procedural videos into clean, dedicated patient charts. Keep clinical records structured and completely separated from personal photos.</p>
         </div>
 
         <!-- 2. Multi-Clinic Switching -->
         <div class="card">
           <div class="card-icon">🏥</div>
           <h3>Multi-Clinic & Branch Switcher</h3>
-          <p>Practice at multiple centers or manage multiple operatory branches? Switch active clinics in one tap with completely isolated patient directories and staff permissions.</p>
+          <p>Manage multiple practices or hospital branches from a single account. Switch active clinics in one tap with fully isolated patient rosters and staff permissions.</p>
         </div>
 
         <!-- 3. Clinical Notes & Progress Tracking -->
         <div class="card">
           <div class="card-icon">📝</div>
-          <h3>Clinical Notes & Timeline</h3>
-          <p>Attach date-stamped treatment notes, diagnosis summaries, and procedural observations directly to patient cases and media records for seamless continuity of care.</p>
+          <h3>Clinical Notes & Treatment Timelines</h3>
+          <p>Record dated procedure notes, clinical observations, and diagnosis summaries attached directly to patient records for accurate documentation and follow-up.</p>
         </div>
 
         <!-- 4. Before & After Case Comparisons -->
         <div class="card">
           <div class="card-icon">🔄</div>
-          <h3>Interactive Case Compare</h3>
-          <p>Create powerful chairside case presentations with interactive side-by-side split screens and vertical cross-fade comparison sliders to communicate treatment outcomes.</p>
+          <h3>Interactive Before & After Compare</h3>
+          <p>Deliver compelling case presentations with interactive side-by-side split screens and vertical cross-fade comparison sliders to demonstrate clinical outcomes.</p>
         </div>
 
         <!-- 5. Smart Unlinked Media Pool -->
         <div class="card">
           <div class="card-icon">⚡</div>
           <h3>Smart Unlinked Media Pool</h3>
-          <p>Capture clinical documentation rapidly during busy procedures and link media to new or existing patient charts whenever convenient with zero workflow disruption.</p>
+          <p>Capture clinical photos and procedural videos rapidly during treatments and link them to patient records whenever convenient without interrupting patient care.</p>
         </div>
 
         <!-- 6. Total Data Ownership & Export -->
         <div class="card">
           <div class="card-icon">💾</div>
           <h3>1-Tap Complete Data Freedom</h3>
-          <p>Your data belongs to your practice. Download all patient folders, clinical notes, and original high-res media files directly to local storage anytime with zero lock-in.</p>
+          <p>Download your entire practice directory, clinical notes, and original full-resolution media files directly to local storage at any time with zero vendor lock-in.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Security Section -->
-  <section class="security">
-    <div class="security-box">
-      <h3>🔒 HIPAA-Aligned Security & Zero Data Monetization</h3>
-      <p>All patient identifiers, clinical records, and high-definition media are encrypted at rest (AES-256) and in transit (TLS 1.3). We never sell, advertise, or monetize healthcare data.</p>
+  <!-- Google OAuth & Data Policy Section -->
+  <section class="oauth-info" id="oauth-policy">
+    <div class="oauth-box">
+      <h3>🔒 How MediGallery Uses Google Sign-In & User Data</h3>
+      <p><strong>MediGallery</strong> integrates Google Sign-In strictly to provide secure, frictionless authentication for authorized healthcare practitioners. We adhere to strict data minimization principles:</p>
+      <ul>
+        <li><strong>Basic Authentication Only:</strong> We only request access to basic Google account profile information (your Google User ID, Name, and Email address) to create your practitioner profile and authenticate your access.</li>
+        <li><strong>No Access to Sensitive Google Data:</strong> MediGallery does NOT request, access, read, or store data from Google Drive, Google Contacts, Google Calendar, Gmail, or any other personal Google services.</li>
+        <li><strong>Data Protection & Privacy:</strong> All patient records, clinical notes, and media files are encrypted at rest using AES-256 and encrypted in transit using TLS 1.3.</li>
+        <li><strong>No Third-Party Sale or Advertising:</strong> Google user data and clinical data are never sold, rented, or used for commercial advertising or data mining.</li>
+      </ul>
     </div>
   </section>
 
