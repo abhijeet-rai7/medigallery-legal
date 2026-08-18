@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediGallery — Clinical Photo & Video EHR for Doctors</title>
-  <meta name="description" content="Every patient photo, exactly where it belongs. MediGallery is the dedicated clinical photo and video management app for dentists, dermatologists, and medical practitioners.">
+  <title>MediGallery — Clinical Media, Patient Records & Multi-Clinic Management</title>
+  <meta name="description" content="The dedicated clinical media management EHR for healthcare practitioners. Seamlessly organize patient photos, clinical notes, treatment progressions, and multi-branch clinics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -76,6 +76,7 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--primary); }
+    
     .hero {
       max-width: 1100px;
       margin: 0 auto;
@@ -99,14 +100,14 @@
       color: var(--text);
       letter-spacing: -0.02em;
       margin-bottom: 20px;
-      max-width: 800px;
+      max-width: 860px;
       margin-left: auto;
       margin-right: auto;
     }
     .hero p {
       font-size: 18px;
       color: var(--text-muted);
-      max-width: 640px;
+      max-width: 720px;
       margin: 0 auto 36px;
     }
     .cta-btn {
@@ -138,11 +139,18 @@
       text-align: center;
       font-size: 30px;
       font-weight: 700;
-      margin-bottom: 48px;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 48px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 28px;
     }
     .card {
@@ -151,6 +159,8 @@
       border-radius: 14px;
       padding: 28px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
     }
     .card-icon {
       width: 48px;
@@ -186,7 +196,7 @@
       border: 1px solid #BBF7D0;
       border-radius: 16px;
       padding: 40px 24px;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
     }
     .security-box h3 {
@@ -239,7 +249,7 @@
       text-align: center;
     }
     @media (max-width: 600px) {
-      h1 { font-size: 32px; }
+      h1 { font-size: 30px; }
       .hero { padding: 48px 20px 40px; }
     }
   </style>
@@ -264,48 +274,61 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="badge">🏥 Purpose-Built for Dentistry & Dermatology</div>
-    <h1>Every Patient Photo, Exactly Where It Belongs.</h1>
-    <p>The dedicated clinical photo and video EHR. Continuous intraoral torch camera, interactive before & after sliders, and 1-tap patient case archiving.</p>
+    <div class="badge">🏥 Purpose-Built Clinical Media & EHR Platform</div>
+    <h1>Effortless Patient Media, Clinical Notes & Multi-Clinic Management.</h1>
+    <p>The dedicated clinical photography and case management system for dentists, dermatologists, and healthcare practices. Keep every patient record, treatment timeline, and clinical note organized across all your clinic locations.</p>
     <a href="https://play.google.com/store/apps/details?id=com.medigallery.app" class="cta-btn">
-      <span>Get it on Google Play</span>
+      <span>Get MediGallery on Google Play</span>
     </a>
   </section>
 
   <!-- Features Grid -->
   <section class="features" id="features">
     <div class="features-container">
-      <h2 class="section-title">Designed for Fast-Paced Clinical Workflows</h2>
+      <h2 class="section-title">Designed for Modern Practice Workflows</h2>
+      <p class="section-subtitle">Streamline patient documentation, case presentations, and operatory collaboration.</p>
+      
       <div class="grid">
-        <div class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Continuous Intraoral Torch</h3>
-          <p>Built-in persistent flashlight mode illuminates deep maxillary molars and skin lesions without triggering jarring flashes.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🔄</div>
-          <h3>Before & After Compare</h3>
-          <p>Interactive side-by-side split screen and vertical cross-fade sliders make chairside case presentation compelling for patients.</p>
-        </div>
+        <!-- 1. Patient Directory & Media Organization -->
         <div class="card">
           <div class="card-icon">📁</div>
-          <h3>Patient-Centric Folders</h3>
-          <p>Keep orthodontic progressions, veneer makeovers, and dermal healing timelines organized in secure patient charts.</p>
+          <h3>Patient-Centric Media Folders</h3>
+          <p>Organize high-resolution photos and procedural videos into clean, dedicated patient charts. Never lose clinical documentation in your personal camera roll again.</p>
         </div>
+
+        <!-- 2. Multi-Clinic Switching -->
         <div class="card">
-          <div class="card-icon">📸</div>
-          <h3>Rapid Multi-Shot Burst</h3>
-          <p>Snap all 5 standard intraoral angles consecutively in seconds without leaving the operatory viewfinder.</p>
+          <div class="card-icon">🏥</div>
+          <h3>Multi-Clinic & Branch Switcher</h3>
+          <p>Practice at multiple centers or manage multiple operatory branches? Switch active clinics in one tap with completely isolated patient directories and staff permissions.</p>
         </div>
+
+        <!-- 3. Clinical Notes & Progress Tracking -->
         <div class="card">
-          <div class="card-icon">🎥</div>
-          <h3>Real First-Frame Previews</h3>
-          <p>Record HD clinical procedure clips with immediate first-frame video thumbnails for effortless browsing.</p>
+          <div class="card-icon">📝</div>
+          <h3>Clinical Notes & Timeline</h3>
+          <p>Attach date-stamped treatment notes, diagnosis summaries, and procedural observations directly to patient cases and media records for seamless continuity of care.</p>
         </div>
+
+        <!-- 4. Before & After Case Comparisons -->
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Interactive Case Compare</h3>
+          <p>Create powerful chairside case presentations with interactive side-by-side split screens and vertical cross-fade comparison sliders to communicate treatment outcomes.</p>
+        </div>
+
+        <!-- 5. Smart Unlinked Media Pool -->
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Smart Unlinked Media Pool</h3>
+          <p>Capture clinical documentation rapidly during busy procedures and link media to new or existing patient charts whenever convenient with zero workflow disruption.</p>
+        </div>
+
+        <!-- 6. Total Data Ownership & Export -->
         <div class="card">
           <div class="card-icon">💾</div>
-          <h3>Total Data Freedom</h3>
-          <p>Download all your clinic's patient folders and original high-res media directly to phone storage with zero lock-in.</p>
+          <h3>1-Tap Complete Data Freedom</h3>
+          <p>Your data belongs to your practice. Download all patient folders, clinical notes, and original high-res media files directly to local storage anytime with zero lock-in.</p>
         </div>
       </div>
     </div>
@@ -314,8 +337,8 @@
   <!-- Security Section -->
   <section class="security">
     <div class="security-box">
-      <h3>🔒 Private, Encrypted & Zero Data Monetization</h3>
-      <p>All clinical records and high-definition media are protected by AES-256 at rest and TLS 1.3 in transit. We never sell or monetize healthcare data.</p>
+      <h3>🔒 HIPAA-Aligned Security & Zero Data Monetization</h3>
+      <p>All patient identifiers, clinical records, and high-definition media are encrypted at rest (AES-256) and in transit (TLS 1.3). We never sell, advertise, or monetize healthcare data.</p>
     </div>
   </section>
 
@@ -327,10 +350,10 @@
           <div class="logo-icon">M</div>
           <span>MediGallery</span>
         </div>
-        <p style="font-size: 14px; max-width: 280px;">Clinical photography & case management EHR for doctors, dentists, and dermatologists.</p>
+        <p style="font-size: 14px; max-width: 280px;">Clinical media management, patient progress records, and multi-clinic EHR for medical and dental practitioners.</p>
       </div>
       <div class="footer-col">
-        <h4>Legal & Policy</h4>
+        <h4>Legal & Policies</h4>
         <ul>
           <li><a href="privacy_policy.html">Privacy Policy</a></li>
           <li><a href="terms_of_service.html">Terms of Service</a></li>
@@ -338,7 +361,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Support & Contact</h4>
+        <h4>Support & Inquiries</h4>
         <ul>
           <li><a href="mailto:actionapp.actionstar@gmail.com">actionapp.actionstar@gmail.com</a></li>
           <li><a href="https://play.google.com/store/apps/details?id=com.medigallery.app">Google Play Store</a></li>
